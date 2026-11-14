@@ -1,6 +1,10 @@
 :root {
   --page-bg: #fff9f3;
   --tint: #ffe8d6;
+  --section-bg: #ffeedf;
+  --card: #ffffff;
+  --hero-from: #ffe8d6;
+  --hero-to: #ffcfa6;
   --text: #4a2c1a;
   --text-soft: #6b4a36;
   --primary: #d35400;
@@ -24,6 +28,10 @@
   :root {
     --page-bg: #17110d;
     --tint: #241a13;
+    --section-bg: #1c140f;
+    --card: #241a13;
+    --hero-from: #2d2118;
+    --hero-to: #44301f;
     --text: #fbf1e6;
     --text-soft: #c2b3a5;
     --primary: #f0782a;
@@ -205,18 +213,18 @@ a.btn {
 
 .btn-outline {
   background: transparent;
-  color: var(--accent-strong);
-  box-shadow: inset 0 0 0 2px var(--accent-strong);
+  color: var(--primary-dark);
+  box-shadow: inset 0 0 0 2px var(--primary-dark);
 }
 
 .btn-outline:hover {
-  background: var(--bg);
+  background: var(--page-bg);
   filter: none;
 }
 
 .page-hero {
   padding-block: clamp(2rem, 6vw, 3.5rem);
-  background: var(--tint);
+  background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
 }
 
 .breadcrumb {
@@ -306,20 +314,20 @@ a.btn {
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;
-  background: var(--accent-strong);
-  color: var(--on-accent);
+  background: var(--primary-dark);
+  color: var(--on-primary);
   font-weight: 700;
   font-size: 0.875rem;
   margin-bottom: 0.35rem;
 }
 
 .steps strong {
-  color: var(--heading);
+  color: var(--text);
   font-size: 0.9375rem;
 }
 
 .steps span {
-  color: var(--muted);
+  color: var(--text-soft);
 }
 
 @media (max-width: 48rem) {
@@ -341,6 +349,7 @@ a.btn {
 
 .contact {
   padding-block: clamp(2rem, 6vw, 3.5rem);
+  background: var(--section-bg);
 }
 
 .contact .container {
@@ -348,6 +357,14 @@ a.btn {
   grid-template-columns: 1.9fr 1fr;
   gap: 2.5rem;
   align-items: start;
+}
+
+.enquiry {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-top: 5px solid var(--primary);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 6px 24px rgba(74, 44, 26, 0.1);
 }
 
 .enquiry h2 {
@@ -393,7 +410,7 @@ legend {
   padding: 0.7rem 1.6rem;
   border: 1px solid var(--primary);
   border-radius: 6px;
-  background: var(--page-bg);
+  background: var(--card);
   color: var(--primary-dark);
   font-size: 0.875rem;
   font-weight: 500;
@@ -517,7 +534,8 @@ textarea {
   padding: 1.5rem;
   border-top: 5px solid var(--sun);
   border-radius: 14px;
-  background: var(--tint);
+  background: var(--card);
+  box-shadow: 0 6px 24px rgba(74, 44, 26, 0.1);
 }
 
 .info-card + .info-card {
@@ -555,7 +573,7 @@ textarea {
 }
 
 .todo-list a {
-  color: var(--accent-strong);
+  color: var(--primary-dark);
   font-weight: 500;
 }
 
@@ -725,7 +743,7 @@ textarea {
   display: flex;
   gap: 0.65rem;
   align-items: flex-start;
-  color: var(--footer-muted);
+  color: var(--footer-soft);
   font-size: 0.9375rem;
 }
 
