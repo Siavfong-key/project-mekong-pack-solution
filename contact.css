@@ -176,12 +176,6 @@ a {
   font-weight: 600;
 }
 
-@media (max-width: 34rem) {
-  .brand-logo {
-    height: 2.75rem;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   .brand {
     padding: 0.35rem 0.75rem;
