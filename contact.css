@@ -1,26 +1,4 @@
 :root {
-  --page-bg: #fff9f3;
-  --tint: #ffe8d6;
-  --section-bg: #ffeedf;
-  --card: #ffffff;
-  --hero-from: #ffe8d6;
-  --hero-to: #ffcfa6;
-  --text: #4a2c1a;
-  --text-soft: #6b4a36;
-  --primary: #d35400;
-  --primary-dark: #a84300;
-  --sun: #f6b73c;
-  --white: #ffffff;
-  --on-primary: #ffffff;
-
-  --input-border: #9a7660;
-  --error: #b3261e;
-  --focus: #0b57d0;
-
-  --footer-bg: #4a2c1a;
-  --footer-text: #fff2e6;
-  --footer-soft: #e3c9b5;
-
   --font: "Inter", system-ui, "Segoe UI", Arial, sans-serif;
 }
 
@@ -87,8 +65,9 @@ a {
 }
 
 .container {
-  width: min(100% - 2.5rem, 70rem);
+  width: 100%;
   margin-inline: auto;
+  padding: 40px;
 }
 
 .skip-link {
@@ -122,7 +101,6 @@ a {
   top: 0;
   z-index: 50;
   background: var(--page-bg);
-  border-bottom: 4px solid var(--sun);
   box-shadow: 0 2px 10px rgba(74, 44, 26, 0.12);
 }
 
@@ -176,20 +154,12 @@ a {
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .brand {
-    padding: 0.35rem 0.75rem;
-    border-radius: 10px;
-    background: #fff9f3;
-  }
-}
-
 .btn {
   padding: 0.85rem 2.4rem;
   border: 0;
   border-radius: 6px;
   background: var(--primary-dark);
-  color: var(--on-primary);
+  color: white;
   font: inherit;
   font-size: 0.9375rem;
   font-weight: 600;
@@ -218,7 +188,6 @@ a.btn {
 }
 
 .page-hero {
-  padding-block: clamp(2rem, 6vw, 3.5rem);
   background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
 }
 
@@ -343,7 +312,7 @@ a.btn {
 }
 
 .contact {
-  padding-block: clamp(2rem, 6vw, 3.5rem);
+  padding: 20px;
   background: var(--section-bg);
 }
 
@@ -526,43 +495,49 @@ textarea {
 }
 
 .info-card {
-  padding: 1.5rem;
-  border-top: 5px solid var(--sun);
+  border-top: 5px solid #f6b73c;
   border-radius: 14px;
   background: var(--card);
   box-shadow: 0 6px 24px rgba(74, 44, 26, 0.1);
 }
 
 .info-card + .info-card {
-  margin-top: 1.25rem;
+  margin-top: 10px;
 }
 
 .info-card h2 {
-  margin-bottom: 1rem;
+  padding-top: 10px;
+  padding-left: 40px;
+  margin-bottom: 10px;
   font-size: 1.125rem;
   font-weight: 600;
 }
 
 .info-card h3 {
+  padding-left: 40px;
   margin-bottom: 0.4rem;
   font-size: 0.8125rem;
   font-weight: 600;
 }
 
 .info-card address {
+  padding-bottom: 20px;
+  padding-left: 40px;
   margin-bottom: 1rem;
   font-size: 0.875rem;
   font-style: normal;
 }
 
 .info-card ul {
-  margin: 0;
-  padding-left: 1.1rem;
+  list-style: none;
+  padding-left: 20px;
+  margin: 25px;
   font-size: 0.875rem;
+  line-height: 1.6;
+  padding-bottom: 20px;
 }
 
 .info-card .todo-list {
-  padding-left: 0;
   list-style: none;
   color: var(--text-soft);
 }
@@ -576,22 +551,25 @@ textarea {
   padding-block: clamp(2rem, 6vw, 3.25rem);
   border-top: 6px solid var(--sun);
   background: var(--primary-dark);
-  color: var(--on-primary);
+  color: white;
 }
 
 .cta-band h2 {
+  padding: 20px;
   margin-bottom: 0.9rem;
-  color: var(--on-primary);
+  color: white;
   font-size: 1.75rem;
   font-weight: 600;
 }
 
 .cta-band p {
   max-width: 52rem;
+  padding: 20px;
 }
 
 .site-footer {
-  border-top: 6px solid var(--sun);
+  padding: 20px;
+  border-top: 6px solid #f6b73c;
   background: var(--footer-bg);
   color: var(--footer-text);
 }
@@ -635,7 +613,7 @@ textarea {
 }
 
 .footer-cta:hover {
-  background: var(--white);
+  background: white;
 }
 
 .footer-grid {
@@ -647,7 +625,7 @@ textarea {
 
 .footer-grid h2 {
   margin-bottom: 0.85rem;
-  color: var(--sun);
+  color: #f6b73c;
   font-size: 0.9375rem;
   font-weight: 600;
 }
